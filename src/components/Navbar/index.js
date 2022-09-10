@@ -3,7 +3,9 @@ import styled from "styled-components";
 import { ReactComponent as Brand } from "../../images/brand.svg";
 import { IoFlashSharp } from "react-icons/io5";
 
-import { menu, btncv } from "./content";
+import ButtonCV from "../ButtonCV";
+
+import { menu } from "./content";
 
 const Navbar = () => {
   return (
@@ -21,9 +23,7 @@ const Navbar = () => {
                 </li>
               ))}
             </Menu>
-            {btncv.map((item) => (
-              <ButtonCV>{item.text}</ButtonCV>
-            ))}
+            <ButtonCV />
             <DarkMode>
               <IoFlashSharp />
             </DarkMode>
@@ -64,18 +64,6 @@ const LinkList = styled.a`
   :hover {
     color: var(--color-main-b);
   }
-`;
-const ButtonCV = styled.button`
-  background: var(--color-linear-a);
-  color: var(--color-light-b);
-  border-radius: 5px;
-  cursor: pointer;
-  height: 40px;
-  padding: 0px var(--32px);
-  transition: 0.2s;
-  text-transform: uppercase;
-  font-weight: 900;
-  border: none;
 `;
 
 const DarkMode = styled.button`

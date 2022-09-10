@@ -3,4 +3,3 @@ export const menu = [
   { text: "projetos", link: "#projetos" },
   { text: "contatos", link: "#contatos" },
 ];
-export const btncv = [{ text: "download cv" }];

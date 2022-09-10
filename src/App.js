@@ -2,9 +2,9 @@ import React, { useState, useEffect } from "react";
 import StyledGlobal from "./theme/styleds.js";
 import { lightTheme, darkTheme } from "./theme/theme";
 import { ThemeProvider } from "styled-components";
-import styled from "styled-components";
 
 import Navbar from "./components/Navbar";
+import Hero from "./components/Hero";
 
 function App() {
   const [theme, setTheme] = useState("light");
@@ -29,6 +29,7 @@ function App() {
       <>
         <StyledGlobal />
         <Navbar />
+        <Hero />
       </>
     </ThemeProvider>
   );
