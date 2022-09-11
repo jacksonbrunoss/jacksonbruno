@@ -107,7 +107,7 @@ const CardProjectInfo = styled.div`
   > footer {
     padding: 0px var(--32px) var(--32px) var(--32px);
     > a {
-      margin-right: var(--32px);
+      margin-right: var(--24px);
       button {
         background: var(--color-linear-a);
         color: var(--color-light-b);
