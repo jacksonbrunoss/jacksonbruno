@@ -5,8 +5,8 @@ import { btncv } from "./content";
 const index = () => {
   return (
     <>
-      {btncv.map((item) => (
-        <ButtonCV>{item.text}</ButtonCV>
+      {btncv.map((item, i) => (
+        <ButtonCV key={i}>{item.text}</ButtonCV>
       ))}
     </>
   );

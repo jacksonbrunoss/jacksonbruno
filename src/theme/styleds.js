@@ -13,7 +13,7 @@ const GlobalStyle = createGlobalStyle`
     //--color-light-b: ${({ theme }) => theme.text};
     --color-light-b: #F2F2F3;
     --color-linear-a: linear-gradient(90.49deg, #6D83F2 0%, #348AC7 111.7%);
-    --color-liner-b: linear-gradient(97.74deg, #19191F 1.72%, #34343D 97.06%);
+    --color-linear-b: linear-gradient(97.74deg, #19191F 1.72%, #34343D 97.06%);
     --color-radial-a: radial-gradient(52.25% 52.25% at 50% 67.16%, rgba(52, 138, 199, 0.20) 0%, rgba(48, 48, 48, 0) 100%);
 
     --font-main: 'Rubik', sans-serif;
@@ -50,6 +50,9 @@ const GlobalStyle = createGlobalStyle`
     font-size: var(--16px);
     text-decoration: none;
     list-style: none;
+  }
+  img {
+    max-width: 100%;
   }
 
 `;

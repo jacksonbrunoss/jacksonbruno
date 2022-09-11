@@ -4,14 +4,14 @@ import avatar from "../../images/avatar.svg";
 
 import { info, Icons, skills } from "./content";
 
+import TitleSection from "../TitleSection";
+
 const About = () => {
   return (
     <AboutBox id="quemsou">
       <Container>
         <WrapperAbout>
-          <ContentAboutTitle>
-            <h2>Quem Sou</h2>
-          </ContentAboutTitle>
+          <TitleSection text="Quem sou" />
           <ContentAboutInfo>
             <AboutAvatarBox>
               <img src={avatar} alt="Jackson Bruno" />
@@ -57,16 +57,6 @@ const Container = styled.div`
 const WrapperAbout = styled.section`
   width: 100%;
   padding: var(--64px) 0px;
-`;
-const ContentAboutTitle = styled.div`
-  width: 100%;
-  text-align: center;
-  padding-bottom: var(--64px);
-  > h2 {
-    font-size: var(--32px);
-    text-transform: uppercase;
-    font-weight: 600;
-  }
 `;
 const ContentAboutInfo = styled.div`
   width: 100%;

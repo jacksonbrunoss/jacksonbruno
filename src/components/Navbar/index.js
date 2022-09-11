@@ -17,8 +17,8 @@ const Navbar = () => {
           </a>
           <NavigationBox>
             <Menu>
-              {menu.map((item) => (
-                <li>
+              {menu.map((item, i) => (
+                <li key={i}>
                   <LinkList href={item.link}>{item.text}</LinkList>
                 </li>
               ))}

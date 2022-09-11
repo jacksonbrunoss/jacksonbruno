@@ -36,10 +36,10 @@ const Hero = () => {
             </ContentHeroActions>
             <HeroTechs>
               <ul>
-                {techs.map((item) => {
+                {techs.map((item, i) => {
                   const Icon = Icons[item.label];
                   return (
-                    <li>
+                    <li key={i}>
                       <CardTechs>
                         <div>
                           <Icon />
