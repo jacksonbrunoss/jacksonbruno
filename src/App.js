@@ -5,6 +5,7 @@ import { ThemeProvider } from "styled-components";
 
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
+import About from "./components/About";
 
 function App() {
   const [theme, setTheme] = useState("light");
@@ -30,6 +31,7 @@ function App() {
         <StyledGlobal />
         <Navbar />
         <Hero />
+        <About />
       </>
     </ThemeProvider>
   );

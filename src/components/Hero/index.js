@@ -114,7 +114,7 @@ const ContentHeroActions = styled.div`
 `;
 const LinkRoute = styled.button`
   color: var(--color-light-b);
-  height: 40px;
+  height: 50px;
   padding: 0px var(--16px);
   background: var(--color-linear-a);
   border-radius: 5px;
@@ -139,7 +139,7 @@ const CardTechs = styled.div`
   max-width: 17.5rem;
   background: var(--color-bg-b);
   border: solid 1px var(--color-main-b);
-  border-radius: 5px;
+  border-radius: 10px;
   > div {
     width: 120px;
     height: 120px;
@@ -158,6 +158,8 @@ const CardTechs = styled.div`
   }
   > p {
     font-size: var(--16px);
+    padding-right: var(--16px);
+    padding-left: var(--16px);
     font-weight: 300;
     line-height: var(--24px);
     padding-bottom: var(--32px);

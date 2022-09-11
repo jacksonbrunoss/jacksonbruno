@@ -32,7 +32,8 @@ const GlobalStyle = createGlobalStyle`
   *,
   *::after,
   *::before {
-    box-sizing: border-box; 
+    box-sizing: border-box;
+    scroll-behavior: smooth; 
   }
   body {
     margin: 0px;
@@ -41,6 +42,7 @@ const GlobalStyle = createGlobalStyle`
     font-family: var(--font-main);
     background: var(--color-bg-a);
     color: var(--color-light-b);
+    
   }
   h1, h2, h3, h4, ul, li, p, a, span, button {
     margin: 0px;

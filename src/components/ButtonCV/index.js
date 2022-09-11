@@ -17,7 +17,7 @@ const ButtonCV = styled.button`
   color: var(--color-light-b);
   border-radius: 5px;
   cursor: pointer;
-  height: 40px;
+  height: 50px;
   padding: 0px var(--32px);
   transition: 0.2s;
   text-transform: uppercase;

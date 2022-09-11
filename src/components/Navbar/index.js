@@ -69,7 +69,7 @@ const LinkList = styled.a`
 const DarkMode = styled.button`
   display: flex;
   align-items: center;
-  height: 40px;
+  height: 50px;
   padding: 0px var(--16px);
   background: var(--color-linear-a);
   color: var(--color-light-b);
