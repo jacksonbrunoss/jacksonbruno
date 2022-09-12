@@ -9,9 +9,9 @@ import { menu } from "./content";
 
 const Navbar = () => {
   return (
-    <NavBar>
+    <NavbarBox>
       <Container>
-        <Wrapper>
+        <WrapperNavbar>
           <a href="#">
             <Brand />
           </a>
@@ -23,18 +23,20 @@ const Navbar = () => {
                 </li>
               ))}
             </Menu>
-            <ButtonCV />
+            <BtnQuery>
+              <ButtonCV />
+            </BtnQuery>
             <DarkMode>
               <IoFlashSharp />
             </DarkMode>
           </NavigationBox>
-        </Wrapper>
+        </WrapperNavbar>
       </Container>
-    </NavBar>
+    </NavbarBox>
   );
 };
 
-const NavBar = styled.nav`
+const NavbarBox = styled.nav`
   width: 100%;
   padding: var(--16px);
 `;
@@ -42,7 +44,7 @@ const Container = styled.div`
   max-width: var(--desktop);
   margin: 0 auto;
 `;
-const Wrapper = styled.div`
+const WrapperNavbar = styled.div`
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -55,6 +57,14 @@ const NavigationBox = styled.div`
 `;
 const Menu = styled.ul`
   display: flex;
+  @media (max-width: 40rem) {
+    display: none;
+  }
+`;
+const BtnQuery = styled.div`
+  @media (max-width: 40rem) {
+    display: none;
+  }
 `;
 const LinkList = styled.a`
   color: var(--color-light-b);

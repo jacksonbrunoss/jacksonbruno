@@ -56,13 +56,16 @@ const Container = styled.div`
 `;
 const WrapperAbout = styled.section`
   width: 100%;
-  padding: var(--64px) 0px;
+  padding: var(--64px) var(--16px);
 `;
 const ContentAboutInfo = styled.div`
   width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: var(--32px);
+  @media (max-width: 40rem) {
+    grid-template-columns: 1fr;
+  }
 `;
 const AboutAvatarBox = styled.aside`
   width: 100%;
@@ -75,6 +78,11 @@ const AboutAvatarInfo = styled.aside`
     font-size: var(--18px);
     line-height: var(--32px);
     font-weight: 300;
+    color: var(--color-light-a);
+    @media (max-width: 40rem) {
+      text-align: center;
+      margin: 0 auto;
+    }
   }
 `;
 const ContentSkillsInfo = styled.div`

@@ -68,8 +68,7 @@ const Container = styled.div`
 `;
 const WrapperHero = styled.section`
   width: 100%;
-  padding-top: 6.5rem;
-  padding-bottom: var(--64px);
+  padding: 6.5rem var(--16px) var(--64px) var(--16px);
   display: flex;
 `;
 const ContentBanner = styled.section`
@@ -102,11 +101,14 @@ const ContentBanner = styled.section`
     margin: 0 auto;
     padding-top: var(--16px);
     line-height: var(--24px);
+    color: var(--color-light-a);
   }
 `;
 const ContentHeroActions = styled.div`
   margin: 0 auto;
+  text-align: center;
   display: flex;
+  flex-wrap: wrap;
   padding: var(--32px) 0px;
   > ul {
     display: flex;
@@ -133,6 +135,8 @@ const HeroTechs = styled.div`
     width: 100%;
     display: flex;
     gap: var(--32px);
+    flex-wrap: wrap;
+    justify-content: center;
   }
 `;
 const CardTechs = styled.div`
@@ -163,6 +167,7 @@ const CardTechs = styled.div`
     font-weight: 300;
     line-height: var(--24px);
     padding-bottom: var(--32px);
+    color: var(--color-light-a);
   }
 `;
 

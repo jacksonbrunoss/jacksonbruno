@@ -57,7 +57,7 @@ const Container = styled.div`
 `;
 const WrapperContact = styled.section`
   width: 100%;
-  padding: var(--64px) 0px;
+  padding: var(--64px) var(--16px);
 `;
 const ContentContact = styled.div`
   width: 100%;
@@ -80,6 +80,9 @@ const ContentContact = styled.div`
 `;
 const ContentContactAction = styled.div`
   width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
   > a {
     button {
       background: var(--color-linear-a);

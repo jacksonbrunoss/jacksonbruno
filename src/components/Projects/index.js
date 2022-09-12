@@ -23,6 +23,7 @@ const Projects = () => {
                       </header>
                       <main>
                         <p>{item.description}</p>
+                        <img src={item.image} alt={item.name} />
                       </main>
                       <footer>
                         <a href={item.link} target="_blanck">
@@ -58,10 +59,15 @@ const Container = styled.div`
 `;
 const WrapperProjects = styled.section`
   width: 100%;
-  padding: var(--64px) 0px;
+  padding: var(--64px) var(--16px);
 `;
 const ContentProjectList = styled.div`
   width: 100%;
+  @media (max-width: 800px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 `;
 const CardProject = styled.div`
   width: 100%;
@@ -70,6 +76,9 @@ const CardProject = styled.div`
   grid-template-columns: 1fr 1fr;
   align-items: center;
   margin-bottom: var(--32px);
+  @media (max-width: 800px) {
+    grid-template-columns: 1fr;
+  }
 `;
 const CardProjectImage = styled.div`
   max-width: 680px;
@@ -78,6 +87,13 @@ const CardProjectImage = styled.div`
   border-radius: 10px;
   overflow: hidden;
   right: 0px;
+  @media (max-width: 1000px) {
+    max-width: 520px;
+    min-height: 380px;
+  }
+  @media (max-width: 800px) {
+    display: none;
+  }
 `;
 const CardProjectInfo = styled.div`
   max-width: 36.25rem;
@@ -93,6 +109,10 @@ const CardProjectInfo = styled.div`
     h3 {
       font-size: var(--24px);
       font-weight: 700;
+      @media (max-width: 800px) {
+        max-width: 100%;
+        text-align: center;
+      }
     }
   }
   > main {
@@ -102,10 +122,28 @@ const CardProjectInfo = styled.div`
       font-size: var(--18px);
       line-height: var(--32px);
       max-width: 400px;
+      font-weight: 300;
+      color: var(--color-light-a);
+      @media (max-width: 800px) {
+        max-width: 100%;
+        text-align: center;
+      }
+    }
+    img {
+      margin-top: var(--32px);
+      border-radius: 10px;
+      display: none;
+      @media (max-width: 800px) {
+        display: block;
+      }
     }
   }
   > footer {
     padding: 0px var(--32px) var(--32px) var(--32px);
+    @media (max-width: 800px) {
+      max-width: 100%;
+      text-align: center;
+    }
     > a {
       margin-right: var(--24px);
       button {

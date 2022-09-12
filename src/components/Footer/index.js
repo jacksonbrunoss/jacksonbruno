@@ -25,13 +25,17 @@ const Container = styled.div`
 `;
 const WrapperFooter = styled.section`
   width: 100%;
-  padding: var(--64px) 0px;
+  padding: var(--32px) 0px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  @media (max-width: 800px) {
+    flex-direction: column;
+  }
   > p {
     font-size: var(--18px);
     font-weight: 600;
+    margin-bottom: var(--16px);
   }
 `;
 export default footer;
