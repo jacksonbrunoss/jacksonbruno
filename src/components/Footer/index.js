@@ -16,7 +16,7 @@ const footer = () => {
     </FooterBox>
   );
 };
-const FooterBox = styled.section`
+const FooterBox = styled.footer`
   width: 100%;
 `;
 const Container = styled.div`
@@ -25,12 +25,13 @@ const Container = styled.div`
 `;
 const WrapperFooter = styled.section`
   width: 100%;
-  padding: var(--32px) 0px;
+  padding: var(--32px) var(--16px);
   display: flex;
   justify-content: space-between;
   align-items: center;
   @media (max-width: 800px) {
     flex-direction: column;
+    align-items: center;
   }
   > p {
     font-size: var(--18px);

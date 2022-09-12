@@ -63,7 +63,7 @@ const WrapperProjects = styled.section`
 `;
 const ContentProjectList = styled.div`
   width: 100%;
-  @media (max-width: 800px) {
+  @media (max-width: 50rem) {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -76,22 +76,22 @@ const CardProject = styled.div`
   grid-template-columns: 1fr 1fr;
   align-items: center;
   margin-bottom: var(--32px);
-  @media (max-width: 800px) {
+  @media (max-width: 50rem) {
     grid-template-columns: 1fr;
   }
 `;
 const CardProjectImage = styled.div`
-  max-width: 680px;
-  min-height: 380px;
+  max-width: 42.5rem;
+  min-height: 23.75rem;
   position: absolute;
   border-radius: 10px;
   overflow: hidden;
   right: 0px;
   @media (max-width: 1000px) {
-    max-width: 520px;
-    min-height: 380px;
+    max-width: 32.5rem;
+    min-height: 23.75rem;
   }
-  @media (max-width: 800px) {
+  @media (max-width: 50rem) {
     display: none;
   }
 `;
@@ -100,7 +100,7 @@ const CardProjectInfo = styled.div`
   min-height: 30rem;
   position: relative;
   background: var(--color-bg-b);
-  border-radius: 10px;
+  border-radius: 0.625rem;
   border: solid 1px var(--color-main-b);
   display: flex;
   flex-direction: column;
@@ -109,7 +109,7 @@ const CardProjectInfo = styled.div`
     h3 {
       font-size: var(--24px);
       font-weight: 700;
-      @media (max-width: 800px) {
+      @media (max-width: 50rem) {
         max-width: 100%;
         text-align: center;
       }
@@ -124,7 +124,7 @@ const CardProjectInfo = styled.div`
       max-width: 400px;
       font-weight: 300;
       color: var(--color-light-a);
-      @media (max-width: 800px) {
+      @media (max-width: 50rem) {
         max-width: 100%;
         text-align: center;
       }
@@ -133,19 +133,25 @@ const CardProjectInfo = styled.div`
       margin-top: var(--32px);
       border-radius: 10px;
       display: none;
-      @media (max-width: 800px) {
+      @media (max-width: 50rem) {
         display: block;
       }
     }
   }
   > footer {
     padding: 0px var(--32px) var(--32px) var(--32px);
-    @media (max-width: 800px) {
+    @media (max-width: 50rem) {
       max-width: 100%;
       text-align: center;
     }
     > a {
       margin-right: var(--24px);
+      @media (max-width: 50rem) {
+        display: flex;
+        flex-wrap: wrap;
+        margin-right: 0px;
+        margin-bottom: var(--16px);
+      }
       button {
         background: var(--color-linear-a);
         color: var(--color-light-b);

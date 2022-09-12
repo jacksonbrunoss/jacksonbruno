@@ -11,6 +11,7 @@ import Contact from "./components/Contact/";
 import Footer from "./components/Footer/";
 
 function App() {
+  document.title = "Jackson Bruno";
   const [theme, setTheme] = useState("light");
 
   const toggleTheme = () => {

@@ -1,44 +1,135 @@
 import React from "react";
 import styled from "styled-components";
 import { ReactComponent as Brand } from "../../images/brand.svg";
-import { IoFlashSharp } from "react-icons/io5";
+import { IoFlashSharp, IoCloseCircleOutline } from "react-icons/io5";
 
 import ButtonCV from "../ButtonCV";
 
 import { menu } from "./content";
 
 const Navbar = () => {
+  const [menuMobile, setMenuMobile] = React.useState(false);
+
+  const handleMenuMobile = () => {
+    setMenuMobile(!menuMobile);
+    console.log(menuMobile);
+  };
   return (
-    <NavbarBox>
-      <Container>
-        <WrapperNavbar>
-          <a href="#">
-            <Brand />
-          </a>
-          <NavigationBox>
-            <Menu>
-              {menu.map((item, i) => (
-                <li key={i}>
-                  <LinkList href={item.link}>{item.text}</LinkList>
-                </li>
-              ))}
-            </Menu>
-            <BtnQuery>
-              <ButtonCV />
-            </BtnQuery>
-            <DarkMode>
-              <IoFlashSharp />
-            </DarkMode>
-          </NavigationBox>
-        </WrapperNavbar>
-      </Container>
-    </NavbarBox>
+    <>
+      <BoxMobile isMobile={menuMobile}>
+        <header>
+          <button onClick={handleMenuMobile}>
+            Fechar <IoCloseCircleOutline />
+          </button>
+        </header>
+        <main>
+          <ul>
+            {menu.map((item, i) => (
+              <li key={i}>
+                <LinkListMobile onClick={handleMenuMobile} href={item.link}>
+                  {item.text}
+                </LinkListMobile>
+              </li>
+            ))}
+          </ul>
+        </main>
+        <footer></footer>
+      </BoxMobile>
+      <NavbarBox>
+        <Container>
+          <WrapperNavbar>
+            <a href="#">
+              <Brand />
+            </a>
+            <NavigationBox>
+              <Menu>
+                {menu.map((item, i) => (
+                  <li key={i}>
+                    <LinkList href={item.link}>{item.text}</LinkList>
+                  </li>
+                ))}
+              </Menu>
+              <MenuMobile onClick={handleMenuMobile}>
+                <div></div>
+                <div></div>
+                <div></div>
+              </MenuMobile>
+              <BtnQuery>
+                <ButtonCV />
+              </BtnQuery>
+              <DarkMode>
+                <IoFlashSharp />
+              </DarkMode>
+            </NavigationBox>
+          </WrapperNavbar>
+        </Container>
+      </NavbarBox>
+    </>
   );
 };
 
 const NavbarBox = styled.nav`
   width: 100%;
   padding: var(--16px);
+`;
+const BoxMobile = styled.div`
+  display: ${(props) => (props.isMobile ? "flex" : "none")};
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  background: var(--color-bg-a);
+  z-index: 1000;
+  transition: 0.2s;
+  > header {
+    width: 100%;
+    padding: var(--32px);
+    display: flex;
+    justify-content: end;
+    > button {
+      border: none;
+      font-size: var(--18px);
+      text-transform: uppercase;
+      color: var(--color-light-b);
+      background: var(--color-linear-a);
+      height: 50px;
+      border-radius: 5px;
+      padding: 0px var(--32px);
+      display: flex;
+      align-items: center;
+      font-weight: 500;
+      cursor: pointer;
+      svg {
+        margin-left: var(--8px);
+        width: 25px;
+        height: 25px;
+      }
+    }
+  }
+  > main {
+    flex: 1;
+    > ul {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      li {
+        margin: var(--16px) var(--32px);
+      }
+    }
+  }
+`;
+const LinkListMobile = styled.a`
+  font-size: var(--32px);
+  transition: 0.2s;
+  color: var(--color-light-b);
+  text-transform: uppercase;
+  font-weight: 500;
+  :hover {
+    color: var(--color-main-b);
+  }
 `;
 const Container = styled.div`
   max-width: var(--desktop);
@@ -54,6 +145,25 @@ const NavigationBox = styled.div`
   width: auto;
   display: flex;
   align-items: center;
+`;
+const MenuMobile = styled.div`
+  cursor: pointer;
+  width: 50px;
+  height: 45px;
+  border-radius: 5px;
+  overflow: hidden;
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  transition: 0.2s;
+  @media (max-width: 40rem) {
+    display: flex;
+  }
+  > div {
+    width: 100%;
+    height: 5px;
+    background: var(--color-linear-a);
+  }
 `;
 const Menu = styled.ul`
   display: flex;
