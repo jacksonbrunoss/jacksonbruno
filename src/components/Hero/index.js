@@ -23,12 +23,18 @@ const Hero = () => {
               <ButtonCV />
               <ul>
                 <li>
-                  <LinkRoute href="#">
+                  <LinkRoute
+                    href="https://www.linkedin.com/in/jackson-bruno-6741791b0/"
+                    target="_blanck"
+                  >
                     <IoLogoLinkedin />
                   </LinkRoute>
                 </li>
                 <li>
-                  <LinkRoute href="#">
+                  <LinkRoute
+                    href="https://github.com/jacksonbrunoss"
+                    target="_blanck"
+                  >
                     <IoLogoGithub />
                   </LinkRoute>
                 </li>
@@ -105,28 +111,29 @@ const ContentBanner = styled.section`
   }
 `;
 const ContentHeroActions = styled.div`
-  margin: 0 auto;
-  text-align: center;
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
+  gap: var(--18px);
   padding: var(--32px) 0px;
   > ul {
     display: flex;
   }
 `;
-const LinkRoute = styled.button`
+const LinkRoute = styled.a`
   color: var(--color-light-b);
-  height: 50px;
-  padding: 0px var(--16px);
+  min-height: 50px;
+  min-width: 50px;
   background: var(--color-linear-a);
   border-radius: 5px;
   cursor: pointer;
   transition: 0.2s;
   border: none;
-  font-size: var(--18px);
+  font-size: var(--24px);
   margin-left: var(--16px);
   display: flex;
   align-items: center;
+  justify-content: center;
 `;
 const HeroTechs = styled.div`
   padding-top: var(--64px);

@@ -10,7 +10,9 @@ const footer = () => {
       <Container>
         <WrapperFooter>
           <p>© Copyright {year} - Todos os direitos reservados.</p>
-          <Brand />
+          <a href="#">
+            <Brand />
+          </a>
         </WrapperFooter>
       </Container>
     </FooterBox>
@@ -32,10 +34,10 @@ const WrapperFooter = styled.section`
   @media (max-width: 800px) {
     flex-direction: column;
     align-items: center;
+    text-align: center;
   }
   > p {
     font-size: var(--18px);
-    font-weight: 600;
     margin-bottom: var(--16px);
   }
 `;

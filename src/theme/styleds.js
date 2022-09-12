@@ -55,6 +55,13 @@ const GlobalStyle = createGlobalStyle`
     max-width: 100%;
   }
 
+  ::-webkit-scrollbar {
+    width: 5px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background-color: var(--color-main-c);
+    border-radius: 5px;
+}
 `;
 
 export default GlobalStyle;

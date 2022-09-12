@@ -20,9 +20,7 @@ const Contact = () => {
               necessidades.
             </p>
             <ContentContactAction>
-              <a href="#">
-                <button>oi.jbss@gmail.com</button>
-              </a>
+              <a href="#">oi.jbss@gmail.com</a>
               <Cv />
             </ContentContactAction>
             <ContactIcons>
@@ -83,20 +81,20 @@ const ContentContactAction = styled.div`
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  gap: var(--16px);
   > a {
-    button {
-      background: var(--color-linear-a);
-      color: var(--color-light-b);
-      border-radius: 5px;
-      cursor: pointer;
-      height: 50px;
-      padding: 0px var(--32px);
-      transition: 0.2s;
-      text-transform: uppercase;
-      font-weight: bold;
-      border: none;
-      margin-right: var(--24px);
-    }
+    display: flex;
+    align-items: center;
+    background: var(--color-linear-a);
+    color: var(--color-light-b);
+    border-radius: 5px;
+    cursor: pointer;
+    height: 50px;
+    padding: 0px var(--32px);
+    transition: 0.2s;
+    text-transform: uppercase;
+    font-weight: bold;
+    border: none;
   }
 `;
 const ContactIcons = styled.div`
@@ -106,13 +104,15 @@ const ContactIcons = styled.div`
     display: flex;
     justify-content: center;
     gap: var(--24px);
+    flex-wrap: wrap;
     > li {
       > a {
         > button {
           display: flex;
           align-items: center;
+          justify-content: center;
           min-height: 50px;
-          padding: 0px var(--16px);
+          min-width: 50px;
           font-size: var(--24px);
           background: var(--color-linear-a);
           color: var(--color-light-b);

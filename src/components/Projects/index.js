@@ -27,12 +27,10 @@ const Projects = () => {
                       </main>
                       <footer>
                         <a href={item.link} target="_blanck">
-                          <button>live demo</button>
+                          live demo
                         </a>
                         <a href={item.github} target="_blanck">
-                          <button>
-                            <IoLogoGithub />
-                          </button>
+                          <IoLogoGithub />
                         </a>
                       </footer>
                     </CardProjectInfo>
@@ -140,31 +138,27 @@ const CardProjectInfo = styled.div`
   }
   > footer {
     padding: 0px var(--32px) var(--32px) var(--32px);
+    display: flex;
+
+    flex-wrap: wrap;
+    gap: var(--18px);
     @media (max-width: 50rem) {
-      max-width: 100%;
-      text-align: center;
+      justify-content: center;
     }
     > a {
-      margin-right: var(--24px);
-      @media (max-width: 50rem) {
-        display: flex;
-        flex-wrap: wrap;
-        margin-right: 0px;
-        margin-bottom: var(--16px);
-      }
-      button {
-        background: var(--color-linear-a);
-        color: var(--color-light-b);
-        border-radius: 5px;
-        cursor: pointer;
-        height: 50px;
-        padding: 0px var(--32px);
-        transition: 0.2s;
-        text-transform: uppercase;
-        font-weight: bold;
-        border: none;
-        font-size: var(--18px);
-      }
+      display: flex;
+      align-items: center;
+      background: var(--color-linear-a);
+      color: var(--color-light-b);
+      border-radius: 5px;
+      cursor: pointer;
+      height: 50px;
+      padding: 0px var(--32px);
+      transition: 0.2s;
+      text-transform: uppercase;
+      font-weight: bold;
+      border: none;
+      font-size: var(--18px);
     }
   }
 `;
