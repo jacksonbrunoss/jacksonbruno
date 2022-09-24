@@ -49,7 +49,7 @@ const Projects = () => {
 };
 const ProjectsBox = styled.section`
   width: 100%;
-  background: var(--color-bg-a);
+  background: var(--bg);
 `;
 const Container = styled.div`
   max-width: var(--desktop);
@@ -97,7 +97,7 @@ const CardProjectInfo = styled.div`
   max-width: 36.25rem;
   min-height: 30rem;
   position: relative;
-  background: var(--color-bg-b);
+  background: var(--comp);
   border-radius: 0.625rem;
   border: solid 1px var(--color-main-b);
   display: flex;
@@ -121,7 +121,7 @@ const CardProjectInfo = styled.div`
       line-height: var(--32px);
       max-width: 400px;
       font-weight: 300;
-      color: var(--color-light-a);
+      color: var(--color);
       @media (max-width: 50rem) {
         max-width: 100%;
         text-align: center;
@@ -149,7 +149,7 @@ const CardProjectInfo = styled.div`
       display: flex;
       align-items: center;
       background: var(--color-linear-a);
-      color: var(--color-light-b);
+      color: var(--light);
       border-radius: 5px;
       cursor: pointer;
       height: 50px;

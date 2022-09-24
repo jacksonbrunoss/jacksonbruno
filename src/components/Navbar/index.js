@@ -1,13 +1,14 @@
 import React from "react";
 import styled from "styled-components";
 import { ReactComponent as Brand } from "../../images/brand.svg";
+import { ReactComponent as Brand2 } from "../../images/brand-2.svg";
 import { IoFlashSharp, IoCloseCircleOutline } from "react-icons/io5";
 
 import ButtonCV from "../ButtonCV";
 
 import { menu } from "./content";
 
-const Navbar = () => {
+const Navbar = ({ toggleTheme }) => {
   const [menuMobile, setMenuMobile] = React.useState(false);
 
   const handleMenuMobile = () => {
@@ -38,9 +39,16 @@ const Navbar = () => {
       <NavbarBox>
         <Container>
           <WrapperNavbar>
-            <a href="#">
-              <Brand />
-            </a>
+            {menuMobile ? (
+              <a href="#">
+                <Brand />
+              </a>
+            ) : (
+              <a href="#">
+                <Brand2 />
+              </a>
+            )}
+
             <NavigationBox>
               <Menu>
                 {menu.map((item, i) => (
@@ -57,7 +65,7 @@ const Navbar = () => {
               <BtnQuery>
                 <ButtonCV />
               </BtnQuery>
-              <DarkMode>
+              <DarkMode onClick={toggleTheme}>
                 <IoFlashSharp />
               </DarkMode>
             </NavigationBox>
@@ -78,7 +86,7 @@ const BoxMobile = styled.div`
   width: 100%;
   height: 100vh;
   position: fixed;
-  background: var(--color-bg-a);
+  background: var(--bg);
   z-index: 1000;
   transition: 0.2s;
   > header {
@@ -90,7 +98,7 @@ const BoxMobile = styled.div`
       border: none;
       font-size: var(--18px);
       text-transform: uppercase;
-      color: var(--color-light-b);
+      color: var(--color);
       background: var(--color-linear-a);
       height: 50px;
       border-radius: 5px;
@@ -103,6 +111,7 @@ const BoxMobile = styled.div`
         margin-left: var(--8px);
         width: 25px;
         height: 25px;
+        fill: var(--color);
       }
     }
   }
@@ -124,11 +133,11 @@ const BoxMobile = styled.div`
 const LinkListMobile = styled.a`
   font-size: var(--32px);
   transition: 0.2s;
-  color: var(--color-light-b);
+  color: var(--color);
   text-transform: uppercase;
   font-weight: 500;
   :hover {
-    color: var(--color-main-b);
+    color: var(--color-main-c);
   }
 `;
 const Container = styled.div`
@@ -177,7 +186,7 @@ const BtnQuery = styled.div`
   }
 `;
 const LinkList = styled.a`
-  color: var(--color-light-b);
+  color: var(--color);
   padding-right: var(--32px);
   text-transform: uppercase;
   transition: 0.2s;
@@ -192,7 +201,7 @@ const DarkMode = styled.button`
   height: 50px;
   padding: 0px var(--16px);
   background: var(--color-linear-a);
-  color: var(--color-light-b);
+  color: var(--light);
   border-radius: 5px;
   cursor: pointer;
   transition: 0.2s;

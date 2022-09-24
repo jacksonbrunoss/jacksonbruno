@@ -107,7 +107,7 @@ const ContentBanner = styled.section`
     margin: 0 auto;
     padding-top: var(--16px);
     line-height: var(--24px);
-    color: var(--color-light-a);
+    color: var(--color);
   }
 `;
 const ContentHeroActions = styled.div`
@@ -121,7 +121,7 @@ const ContentHeroActions = styled.div`
   }
 `;
 const LinkRoute = styled.a`
-  color: var(--color-light-b);
+  color: var(--light);
   min-height: 50px;
   min-width: 50px;
   background: var(--color-linear-a);
@@ -148,7 +148,7 @@ const HeroTechs = styled.div`
 `;
 const CardTechs = styled.div`
   max-width: 17.5rem;
-  background: var(--color-bg-b);
+  background: var(--comp);
   border: solid 1px var(--color-main-b);
   border-radius: 10px;
   > div {
@@ -161,6 +161,7 @@ const CardTechs = styled.div`
     align-items: center;
     justify-content: center;
     font-size: var(--64px);
+    color: var(--light);
   }
   > h4 {
     font-size: var(--24px);
@@ -174,7 +175,7 @@ const CardTechs = styled.div`
     font-weight: 300;
     line-height: var(--24px);
     padding-bottom: var(--32px);
-    color: var(--color-light-a);
+    color: var(--color);
   }
 `;
 

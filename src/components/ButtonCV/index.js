@@ -16,7 +16,7 @@ const index = () => {
 
 const ButtonCV = styled.a`
   background: var(--color-linear-a);
-  color: var(--color-light-b);
+  color: var(--light);
   border-radius: 5px;
   cursor: pointer;
   height: 50px;

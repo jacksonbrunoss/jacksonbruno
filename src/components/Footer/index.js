@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { ReactComponent as Brand } from "../../images/brand.svg";
+import { ReactComponent as Brand } from "../../images/brand-2.svg";
 
 const footer = () => {
   const dataAtual = new Date();

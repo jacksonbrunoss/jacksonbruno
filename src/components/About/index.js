@@ -48,7 +48,7 @@ const About = () => {
 };
 const AboutBox = styled.section`
   width: 100%;
-  background: var(--color-linear-b);
+  background: var(--linear);
 `;
 const Container = styled.div`
   max-width: var(--desktop);
@@ -78,7 +78,7 @@ const AboutAvatarInfo = styled.aside`
     font-size: var(--18px);
     line-height: var(--32px);
     font-weight: 300;
-    color: var(--color-light-a);
+    color: var(--color);
     @media (max-width: 40rem) {
       text-align: center;
       margin: 0 auto;
@@ -112,7 +112,7 @@ const SkillsList = styled.div`
 const CardSkills = styled.div`
   width: 11.25rem;
   height: 11.25rem;
-  background: var(--color-bg-b);
+  background: var(--comp);
   border-radius: 0.625rem;
   border: solid 1px var(--color-main-b);
   display: flex;

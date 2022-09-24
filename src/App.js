@@ -22,6 +22,7 @@ function App() {
       window.localStorage.setItem("theme", "light");
       setTheme("light");
     }
+    console.log(theme);
   };
 
   useEffect(() => {
@@ -30,10 +31,10 @@ function App() {
   }, []);
 
   return (
-    <ThemeProvider theme={theme === "light" ? lightTheme : darkTheme}>
+    <ThemeProvider theme={theme === "dark" ? darkTheme : lightTheme}>
       <>
         <StyledGlobal />
-        <Navbar />
+        <Navbar toggleTheme={toggleTheme} />
         <Hero />
         <About />
         <Projects />
