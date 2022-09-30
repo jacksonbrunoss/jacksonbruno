@@ -9,6 +9,8 @@ import About from "./components/About";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact/";
 import Footer from "./components/Footer/";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 function App() {
   document.title = "Jackson Bruno - Desenvolvedor Frontend";
@@ -28,6 +30,7 @@ function App() {
   useEffect(() => {
     const localTheme = window.localStorage.getItem("theme");
     localTheme && setTheme(localTheme);
+    AOS.init();
   }, []);
 
   return (

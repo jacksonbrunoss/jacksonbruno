@@ -11,7 +11,7 @@ const Hero = () => {
     <HeroBox>
       <Container>
         <WrapperHero>
-          <ContentBanner>
+          <ContentBanner data-aos="fade-up" data-aos-duration="2000">
             <span>Olá, me chamo</span>
             <h1>Jackson Bruno</h1>
             <h4>Desenvolvedor frontend</h4>
@@ -144,6 +144,7 @@ const HeroTechs = styled.div`
     gap: var(--32px);
     flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
   }
 `;
 const CardTechs = styled.div`

@@ -12,7 +12,7 @@ const Projects = () => {
       <Container>
         <WrapperProjects>
           <TitleSection text="Meus projetos" />
-          <ContentProjectList>
+          <ContentProjectList data-aos="fade-right" data-aos-duration="2000">
             <ul>
               {projects.map((item, i) => (
                 <li key={i}>
@@ -91,6 +91,9 @@ const CardProjectImage = styled.div`
   }
   @media (max-width: 50rem) {
     display: none;
+  }
+  > img {
+    min-height: 23.75rem;
   }
 `;
 const CardProjectInfo = styled.div`

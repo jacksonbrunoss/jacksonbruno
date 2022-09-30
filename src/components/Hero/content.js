@@ -10,16 +10,16 @@ export const techs = [
   {
     label: "IoLogoFigma",
     title: "Figma",
-    text: "I'm more front end focused and love to work with Reactjs as well as pure HTML, CSS.",
+    text: "Com o figma, crio interfaces de forma clara, objetiva e intuitiva para o usuário.",
   },
   {
     label: "IoLogoCss3",
     title: "Html e Css",
-    text: "I'm more front end focused and love to work with Reactjs as well as pure HTML, CSS.",
+    text: "Com HTML e CSS, crio layouts com boa semântica e estilos limpos e modernos.",
   },
   {
     label: "IoLogoReact",
     title: "React",
-    text: "I'm more front end focused and love to work with Reactjs as well as pure HTML, CSS.",
+    text: "Com o Reactjs crio aplicativos web para deixar os sites mais dinâmicos e intuitivos.",
   },
 ];

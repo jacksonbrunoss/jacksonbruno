@@ -10,7 +10,7 @@ const About = () => {
   return (
     <AboutBox id="quemsou">
       <Container>
-        <WrapperAbout>
+        <WrapperAbout data-aos="fade-down" data-aos-duration="2000">
           <TitleSection text="Quem sou" />
           <ContentAboutInfo>
             <AboutAvatarBox>
@@ -26,7 +26,7 @@ const About = () => {
             <div>
               <h2>Minhas habilidades</h2>
             </div>
-            <SkillsList>
+            <SkillsList data-aos="fade-down" data-aos-duration="2000">
               <ul>
                 {skills.map((item, i) => {
                   const Icon = Icons[item.label];
