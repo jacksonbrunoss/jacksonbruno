@@ -10,7 +10,7 @@ const Contact = () => {
   return (
     <ContactBox id="contatos">
       <Container>
-        <WrapperContact>
+        <WrapperContact data-aos="fade-down" data-aos-duration="2000">
           <TitleSection text="Contatos" />
           <ContentContact>
             <h4>Pronto para começarmos um projeto juntos?</h4>

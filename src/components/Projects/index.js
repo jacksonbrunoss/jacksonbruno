@@ -12,7 +12,7 @@ const Projects = () => {
       <Container>
         <WrapperProjects>
           <TitleSection text="Meus projetos" />
-          <ContentProjectList data-aos="fade-right" data-aos-duration="2000">
+          <ContentProjectList data-aos="fade-righ" data-aos-duration="3000">
             <ul>
               {projects.map((item, i) => (
                 <li key={i}>
@@ -79,11 +79,15 @@ const CardProject = styled.div`
   }
 `;
 const CardProjectImage = styled.div`
+  background: var(--comp);
   max-width: 42.5rem;
   min-height: 23.75rem;
   position: absolute;
   border-radius: 10px;
   overflow: hidden;
+  display: flex;
+  align-items: center;
+  border: solid 1px var(--color-main-b);
   right: 0px;
   @media (max-width: 1000px) {
     max-width: 32.5rem;
@@ -93,7 +97,6 @@ const CardProjectImage = styled.div`
     display: none;
   }
   > img {
-    min-height: 23.75rem;
   }
 `;
 const CardProjectInfo = styled.div`
@@ -105,6 +108,7 @@ const CardProjectInfo = styled.div`
   border: solid 1px var(--color-main-b);
   display: flex;
   flex-direction: column;
+  padding-right: var(--64px);
   > header {
     padding: var(--32px);
     h3 {
