@@ -10,9 +10,9 @@ const Projects = () => {
   return (
     <ProjectsBox id="projetos">
       <Container>
-        <WrapperProjects>
+        <WrapperProjects data-aos="fade-down" data-aos-duration="2000">
           <TitleSection text="Meus projetos" />
-          <ContentProjectList data-aos="fade-righ" data-aos-duration="3000">
+          <ContentProjectList>
             <ul>
               {projects.map((item, i) => (
                 <li key={i}>
@@ -109,6 +109,9 @@ const CardProjectInfo = styled.div`
   display: flex;
   flex-direction: column;
   padding-right: var(--64px);
+  @media (max-width: 50rem) {
+    padding-right: 0px;
+  }
   > header {
     padding: var(--32px);
     h3 {
